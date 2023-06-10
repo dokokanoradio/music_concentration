@@ -1,4 +1,4 @@
-# music_concentration
+# music_concentration Ver1.0.1
 音楽神経衰弱のシミュレーション用ファイルです。<br>
 シミュレーション用のpythonスクリプトとグラフ描画用のRスクリプトから構成されます。
 
@@ -25,7 +25,8 @@
 * Rを起動し、プロンプトで`install.packages("ggplot2")`を実行すればインストール可能。
 
 # 取りあえず動かしてみる
-1. コマンドプロンプトなどで`python main.py`を実行してCSVを生成する。
+1. コマンドプロンプトなどで`python main.py`を実行してCSVを生成する。<br>
+   ※10秒くらいかかります。あとCSVファイルは30MB位になるので注意。
 2. RないしはRStudio上でgraph.Rを読み込んで実行する。<br>
    (事前にワーキングディレクトリをgraph.Rがあるディレクトリに設定すること)
 3. graph.pngが出来上がる。
@@ -37,12 +38,13 @@
 # 参考：ファイルの内容
 ## main.py
 * 選択をバラバラにした場合と固定した場合での正解確率を計算するpythonスクリプトです。
-* コマンドプロンプトなどででmain.pyにあるフォルダに移動し、引数無しで`python main.py`でOKです。(Windowsの場合は`py.exe main.py`)
+* コマンドプロンプトなどでmain.pyにあるフォルダに移動し、引数無しで`python main.py`でOKです。(Windowsの場合は`py.exe main.py`)
 * 定数のGAMESを変更することで、シミュレーションするゲーム数を変更できます。
 * シミュレーション結果はそれぞれCSVファイルで出力されます。
   * バラバラはデフォルトだと"result_barabara.csv"で保存
   * 固定はデフォルトだと"result_kotei.csv"で保存
 * [TIPS]ファイル名を変更したい場合はCSV_BARA, CSV_KOTEIを変更すればOK
+* OUTPUT_INTERVALを変更すればデータの間引きが出来ます。(10回に1回出力とか)
 * 出力ファイルのイメージはsampleフォルダ内を参照してください。
 
 ## graph.R
