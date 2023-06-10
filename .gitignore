@@ -210,3 +210,7 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+#ADD
+#vscode env
+.vscode
